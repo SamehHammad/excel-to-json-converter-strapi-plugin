@@ -10,7 +10,7 @@ export default {
       icon: PluginIcon,
       intlLabel: {
         id: `${PLUGIN_ID}.plugin.name`,
-        defaultMessage: PLUGIN_ID,
+        defaultMessage: "Excel To JSON Converter",
       },
       Component: async () => {
         const { App } = await import('./pages/App');

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.5",
   "keywords": [],
   "type": "commonjs",
   "exports": {
@@ -68,11 +68,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SamehHammad/excel-to-json-converter.git"
+    "url": "git+ssh://git@github.com/SamehHammad/excel-to-json-converter-strapi-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/SamehHammad/excel-to-json-converter/issues"
+    "url": "https://github.com/SamehHammad/excel-to-json-converter-strapi-plugin/issues"
   },
-  "homepage": "https://github.com/SamehHammad/excel-to-json-converter#readme",
+  "homepage": "https://github.com/SamehHammad/excel-to-json-converter-strapi-plugin#readme",
   "author": "Sameh Hammad <sam7hammad@gmail.com>"
 }
