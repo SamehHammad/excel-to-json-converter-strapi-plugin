@@ -21,13 +21,8 @@ const ExcelToJsonConverter = () => {
       const productId = item.id || generateUniqueId();
 
       outputData["api::product.product"][productId] = {
-        "id": parseInt(item.id, 10) || productId,
-        "documentId": item.documentId || generateDocumentId(),
         "title": item.title || '',
-        "createdAt": new Date().toISOString(),
-        "updatedAt": new Date().toISOString(),
-        "publishedAt": item.publishedAt || null,
-        "locale": item.locale || 'en',
+        "localizations": item.localizations || 'en',
         "SKU": item.SKU ? item.SKU.toString() : '',
         "price": parseInt(item.price, 10) || 0,
         "Types": item.Types || '',
@@ -38,10 +33,14 @@ const ExcelToJsonConverter = () => {
         "stock":parseInt(item.stock, 10) || 0,
         "buildstation_url": item.buildstation_url || null,
         "isFeature": item.isFeature || false,
-        "isVariant": item.isVariant || false,
+        "isVisible": item.isVariant || false,
         "images": item.images || null,
         "main_image": item.main_image || null,
         "images_urls": item.images_urls || '',
+        "Variant_Type": item.Variant_Type || '',
+        "Parent_SKU": item.Parent_SKU || '',
+        "Data_Sheet": item.Data_Sheet || '',
+        "var_value": item.var_value || '',
         "Manuals": item.Manuals || '',
         "colors": Array.isArray(item.colors) ? item.colors : typeof item.colors === 'string' ? item.colors.split(',').map(Number) : [],
         "sub_categories": item.sub_categories || ''||[],
@@ -53,10 +52,6 @@ const ExcelToJsonConverter = () => {
         "related_prodcuts": Array.isArray(item.related_prodcuts) ? item.related_prodcuts : [],
         "products": item.products || null,
         "bought_together": Array.isArray(item.bought_together) ? item.bought_together : [],
-        "productss": Array.isArray(item.productss) ? item.productss : [],
-        "localizations": item.localizations || '',
-        "createdBy": item.createdBy || null,
-        "updatedBy": item.updatedBy || null
       };
     });
   }, [generateDocumentId, generateUniqueId]);
